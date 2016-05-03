@@ -37,3 +37,10 @@ commits the rows that have been written.
     writer.flush(); //flush the row to the table
     writer.close(); //close the writer
  
+## Dependencies
+
+Requires PostgreSQL JDBC driver.
+
+## Author
+
+Duncan Pauly
