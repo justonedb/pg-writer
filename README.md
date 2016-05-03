@@ -27,7 +27,7 @@ commits the rows that have been written.
                                        "me", //user to connect with
                                        "pwd", //password to authenticate with
                                        "myTable", //name of table to write to 
-                                       new String[]{"id","datetime"}, //name of columns to write to
+                                       new String[]{"id","datetime"}, //names and order of columns to write to
                                        64*1024); //buffer size
              
     writer.append("1"); //append "1" to the first column in the first row
