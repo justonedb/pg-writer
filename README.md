@@ -8,15 +8,13 @@ Streaming writer for PostgreSQL tables
 
 A writer that implements the apendable, flushable and closeable interfaces for appending rows to a PostgreSQL table.
 
-Columns are appended to a row in the order that columns are declared when the writer is constructed. When a row
-is full a new row is implicitly started. Each column value is appended as a string representation using conventional PostgreSQL 
-number, datetime and array string formats. 
+A row is constructed by appending column values to it and when the row is full a new row is implicitly started. Each column value is appended as a string representation using conventional PostgreSQL number, datetime and array string formats. Column values are appended to a row in the column order specified when the writer is constructed.
 
 The append methods append to the current column value and the next() method is used to advance to the next column 
 or row. Convenience methods are provided for returning the current column number in a row and an indication
-of whether the current column is the last column in the row.
+of whether the current column is the first or last column in the row.
 
-Rows are buffered and are written to the database either when the flush() method is called or when
+Rows are buffered and are written to the database either when explicitly flushed or when
 the buffer becomes full. Only complete rows are written to the table and each write operation
 commits the rows that have been written.
 
