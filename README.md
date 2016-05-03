@@ -6,7 +6,7 @@ Streaming writer for PostgreSQL tables
 
 ## Overview
 
-A writer that implements the apendable, flushable and closeable interfaces for appending rows to a PostgreSQL table.
+A writer that implements the appendable, flushable and closeable interfaces for appending rows to a PostgreSQL table.
 
 A row is constructed by appending column values to it and when the row is full a new row is implicitly started. Each column value is appended as a string representation using conventional PostgreSQL number, datetime and array string formats. Column values are appended to a row in the column order specified when the writer is constructed.
 
