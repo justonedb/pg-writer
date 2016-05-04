@@ -34,7 +34,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import org.postgresql.core.BaseConnection;//PostgreSQL database connection
-import org.postgresql.copy.CopyManager;//PostgreSQL database connection
+import org.postgresql.copy.CopyManager;//PostgreSQL copy manager
 
 /**
  * <P>
