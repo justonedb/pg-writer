@@ -35,6 +35,19 @@ commits the rows that have been written.
     writer.flush(); //flush the row to the table
     writer.close(); //close the writer
  
+## Internals
+
+The class uses the PostgreSQL COPY interface to append rows to the table. The append() methods append strings as field values and the 
+next() method appends a field or record delimiter when moving to the next column or row. When the buffer is flushed, all of the
+complete records in the buffer are copied to the database and removed from the buffer. If the last record in the buffer is incomplete
+it is not flushed and is left in the buffer.
+
+The following characters are used for field delimiters, record delimiters and quotation marks:
+
+* Field delimiter: STX (0x2)
+* Record delimiter: NL (0xA)
+* Quotation mark: ETX (0x3)
+
 ## Dependencies
 
 Requires PostgreSQL JDBC driver.
