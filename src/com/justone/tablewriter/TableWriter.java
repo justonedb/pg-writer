@@ -41,9 +41,9 @@ import org.postgresql.copy.CopyManager;//PostgreSQL copy manager
  * A writer class for appending rows to a database table in a PostgreSQL or compatible database. 
  * </P>
  * <P>
- * Columns are appended to a row in the order that columns are declared when the writer is constructed. When a row
- * is full a new row is implicitly started. Each column value is appended as a string representation using conventional PostgreSQL 
- * number, datetime and array string formats. 
+ * A row is constructed by appending column values to it and when the row is full a new row is implicitly started. 
+ * Each column value is appended as a string representation using conventional PostgreSQL number, datetime and array string formats. 
+ * Column values are appended to a row in the column order specified when the writer is constructed. 
  * </P>
  * <P>
  * The append methods append to the current column value and the next() method is used to advance to the next column 
