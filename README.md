@@ -52,6 +52,10 @@ The following characters are used for field delimiters, record delimiters and qu
 
 Requires PostgreSQL JDBC driver.
 
+## Support
+
+Email support@justonedb.com for support.
+
 ## Author
 
 Duncan Pauly
