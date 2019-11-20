@@ -1,4 +1,4 @@
-# *THIS REPOSITORY IS NO LONGER SUPPORTED*
+# *THIS REPOSITORY IS NOT SUPPORTED*
 
 # pg-writer
 
@@ -56,7 +56,7 @@ Requires PostgreSQL JDBC driver.
 
 ## Support
 
-Email support@justonedb.com for support.
+This repository is not supported.
 
 ## Author
 
